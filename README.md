@@ -54,3 +54,20 @@ REQUEST BODY:
 "dietary": "Vegan",
 "language": "English"
 }
+
+##Entity object - Person
+id - UUID
+first_name - String
+last_name - String
+d_o_b - String
+gender - String
+university_email - String
+program - String
+password - String
+nationality - String
+dietary - String
+language - String
+shared_occupancy - String
+pet_preference - String
+smoking_habit - String
+drinking_habit - String
