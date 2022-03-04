@@ -40,4 +40,17 @@ public class PersonService {
         return personDAO.updatePersonById(id, newPerson);
     }
 
+    public int authenticate(Person person){
+        Optional<Person> original = personDAO.selectPersonByEmail(person.getUniversity_email());
+        if(original.isEmpty()) return 0;
+        Person original_person = original.get();
+        if(original_person.getPassword().equals(person.getPassword())) return 1;
+        return 0;
+
+    }
+
+    public List<Person> searchPerson(Person person) {
+        return personDAO.searchPerson(person);
+    }
+
 }

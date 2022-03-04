@@ -44,6 +44,18 @@ public class PersonController {
          personService.updatePerson(id, personToUpdate);
     }
 
+    @RequestMapping("/authentication")
+    @PutMapping
+    public int authenticate(@RequestBody Person person){
+        return personService.authenticate(person);
+    }
+
+    @RequestMapping("/search")
+    @PutMapping
+    public List<Person> searchPerson(@RequestBody Person person) {
+        return personService.searchPerson(person);
+    }
+
 
 
 }

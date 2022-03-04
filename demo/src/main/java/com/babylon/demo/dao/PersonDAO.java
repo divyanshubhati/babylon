@@ -17,7 +17,11 @@ public interface PersonDAO {
 
     List<Person> selectAllPeople();
 
+    List<Person> searchPerson(Person person);
+
     Optional<Person> selectPersonById(UUID id);
+
+    Optional<Person> selectPersonByEmail(String university_email);
 
     int deletePersonById(UUID id);
 
